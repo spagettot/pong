@@ -21,6 +21,7 @@ void Ball_physics(Ball *ball,  Player *Player1, Player *Player2)
         ball->Pos.y = GetScreenHeight()/2;
 
         Player1->score += 1;
+	speed_x *= -1;
     }
 
     if (ball->Pos.x - ball->radius <= 0)
@@ -29,6 +30,8 @@ void Ball_physics(Ball *ball,  Player *Player1, Player *Player2)
         ball->Pos.y = GetScreenHeight()/2;
 
         Player2->score += 1;
+
+	speed_x *= -1;
     }
 
     if (CheckCollisionCircleRec(ball->Pos, ball->radius, Player1->rec) || CheckCollisionCircleRec(ball->Pos, ball->radius, Player2->rec))
