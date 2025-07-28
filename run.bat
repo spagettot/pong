@@ -8,7 +8,7 @@ for %%f in (src\*.c) do (
 
 echo compiling ....
 
-gcc -O3 -Iinclude -Llib !SOURCES! -o main.exe -lraylib -lopengl32 -lgdi32 -lwinmm -mwindows
+gcc -O3 -Iinclude -Llib !SOURCES! -o pong.exe -lraylib -lopengl32 -lgdi32 -lwinmm -mwindows
 start main.exe
 
 echo,
