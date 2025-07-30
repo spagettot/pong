@@ -20,9 +20,9 @@ typedef struct
     Color color;
 } Ball;
 
+typedef enum GameScreen { GAME, MENU, PAUSE } GameScreen;
+
 void mouvement_and_colision(Ball *ball,  Player *Player1, Player *Player2);
 void player_input_and_colision(Player *Player1, Player *Player2);
-void pause();
-void menu();
 
 #endif

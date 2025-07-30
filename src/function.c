@@ -70,35 +70,3 @@ void mouvement_and_colision(Ball *ball,  Player *Player1, Player *Player2)
     Ball_physics(ball, Player1, Player2);
     player_input_and_colision(Player1, Player2);
 }
-
-void menu()
-{
-    Texture2D img = LoadTexture("res/menus/menu.png");
-
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
-            DrawTexture(img, 0, 0, WHITE);
-        EndDrawing();
-
-        if (IsKeyPressed(KEY_ENTER)) break;
-    }
-
-    UnloadTexture(img);
-}
-
-void pause()
-{
-    Texture2D img = LoadTexture("res/menus/pause.png");
-
-    while (!WindowShouldClose())
-    {
-        BeginDrawing();
-            DrawTexture(img, 0, 0, WHITE);
-        EndDrawing();
-
-        if (IsKeyPressed(KEY_ESCAPE)) break;
-    }
-
-    UnloadTexture(img);
-}
