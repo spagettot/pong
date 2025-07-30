@@ -10,13 +10,17 @@ typedef struct
 {
     Rectangle rec;
     Color color;
+    float speed;
     int score;
 } Player;
 
 typedef struct
 {
-    Vector2 Pos;
+    int x;
+    int y;
     float radius;
+    float speed_x;
+    float speed_y;
     Color color;
 } Ball;
 

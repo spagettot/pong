@@ -5,9 +5,9 @@ int fontSize = 40;
 int height = 600;
 int width = 800;
 
-Player Player1 = { { 10, 250, 20, 100 }, BLUE, 0 };
-Player Player2 = { { 770, 250, 20, 100 }, RED, 0 };
-Ball ball = { { 400, 300 }, 5.0, ORANGE };
+Player Player1 = { { 10, 250, 20, 100 }, BLUE, 8, 0 };
+Player Player2 = { { 770, 250, 20, 100 }, RED, 8, 0 };
+Ball ball = { 400, 300, 5.0, 5.0, 5.0, ORANGE };
 
 GameScreen state = MENU;
 
@@ -60,7 +60,7 @@ int main(void)
 
                 DrawRectangle(Player2.rec.x, Player2.rec.y, Player2.rec.width, Player2.rec.height, Player2.color);
 
-                DrawCircle(ball.Pos.x, ball.Pos.y, ball.radius, ball.color);
+                DrawCircle(ball.x, ball.y, ball.radius, ball.color);
             }
 
             else if (state == PAUSE)
