@@ -41,7 +41,7 @@ static void Ball_physics(Ball *ball,  Player *Player1, Player *Player2)
 
 }
 
-static void player_input_and_colision(Player *Player1, Player *Player2)
+void player_input_and_colision(Player *Player1, Player *Player2)
 {
     if (IsKeyDown(KEY_S))
         Player1->rec.y = Player1->rec.y + Player1->speed;
